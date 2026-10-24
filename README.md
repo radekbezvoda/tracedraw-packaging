@@ -17,10 +17,14 @@ licensed under **MIT OR Apache-2.0**.
 
 ## Published local artifacts
 
+All artifacts target **x86_64** (also called **AMD64**). The Snap filename uses
+`amd64` because that is Snapcraft's architecture name; it is the same CPU
+architecture as `x86_64` in the Flatpak filename.
+
 | Artifact | Architecture | SHA-256 |
 | --- | --- | --- |
-| `tracedraw-0.15.0-x86_64-workdirs.flatpak` | x86_64 | `ae8f008c370b710fc5de5e3d542e7c550b652b6a811d8428a3c07355ebed7379` |
-| `tracedraw_0.15.0_amd64.snap` | amd64 | `d78f092988a790ed892c9b1356ea0cba55c050a3d74e05365ad722a0f19ae91d` |
+| `tracedraw-0.15.0-x86_64-workdirs.flatpak` | x86_64 (AMD64) | `ae8f008c370b710fc5de5e3d542e7c550b652b6a811d8428a3c07355ebed7379` |
+| `tracedraw_0.15.0_amd64.snap` | x86_64 (AMD64) | `d78f092988a790ed892c9b1356ea0cba55c050a3d74e05365ad722a0f19ae91d` |
 
 Verify locally with:
 
