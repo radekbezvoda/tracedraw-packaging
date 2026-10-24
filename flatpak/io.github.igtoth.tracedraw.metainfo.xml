@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.igtoth.tracedraw</id>
+  <name>TraceDraw</name>
+  <summary>Vector illustration editor</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT OR Apache-2.0</project_license>
+  <developer id="org.github.igtoth">
+    <name>Igor Tóth</name>
+  </developer>
+  <launchable type="desktop-id">io.github.igtoth.tracedraw.desktop</launchable>
+  <url type="homepage">https://github.com/igtoth/tracedraw</url>
+  <url type="bugtracker">https://github.com/igtoth/tracedraw/issues</url>
+  <description>
+    <p>TraceDraw is a vector illustration editor for Windows, macOS, Linux, and the browser.</p>
+  </description>
+  <provides>
+    <binary>tracedraw</binary>
+    <binary>tracedraw-cli</binary>
+    <mediatype>application/x-tdraw</mediatype>
+    <mediatype>application/x-cdr</mediatype>
+  </provides>
+  <releases>
+    <release version="0.15.0" date="2026-10-24"/>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>

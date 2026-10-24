@@ -1,0 +1,18 @@
+# Local build output
+releases/*.flatpak
+releases/*.snap
+
+# Flatpak build state
+flatpak/build-dir/
+flatpak/.flatpak-builder/
+flatpak/repo/
+
+# Snapcraft build state
+snap/parts/
+snap/prime/
+snap/stage/
+snap/.snapcraft/
+
+# Editor and OS state
+.DS_Store
+*~

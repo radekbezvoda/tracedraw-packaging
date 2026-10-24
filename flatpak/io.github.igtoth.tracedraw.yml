@@ -1,0 +1,34 @@
+app-id: io.github.igtoth.tracedraw
+runtime: org.freedesktop.Platform
+runtime-version: '26.08'
+sdk: org.freedesktop.Sdk
+command: tracedraw
+finish-args:
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  - --device=dri
+  - --filesystem=xdg-desktop
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+modules:
+  - name: tracedraw
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 tracedraw /app/bin/tracedraw
+      - install -Dm755 tracedraw-cli /app/bin/tracedraw-cli
+      - install -Dm644 io.github.igtoth.tracedraw.desktop /app/share/applications/io.github.igtoth.tracedraw.desktop
+      - install -Dm644 io.github.igtoth.tracedraw.png /app/share/icons/hicolor/256x256/apps/io.github.igtoth.tracedraw.png
+      - install -Dm644 io.github.igtoth.tracedraw.metainfo.xml /app/share/metainfo/io.github.igtoth.tracedraw.metainfo.xml
+    sources:
+      - type: archive
+        url: https://github.com/igtoth/tracedraw/releases/download/v0.15.0/tracedraw-0.15.0-linux-x86_64.tar.gz
+        sha256: 0231b186494562dbb59ad8c019d1cc590b6dd8e00182e444bcd77ccdf7c625c0
+        strip-components: 0
+      - type: file
+        path: io.github.igtoth.tracedraw.desktop
+      - type: file
+        path: io.github.igtoth.tracedraw.png
+      - type: file
+        path: io.github.igtoth.tracedraw.metainfo.xml

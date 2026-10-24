@@ -1,0 +1,78 @@
+name: tracedraw
+title: TraceDraw
+base: core24
+version: '0.15.0'
+summary: Vector illustration editor
+description: |
+  TraceDraw is an open-source vector illustration editor for Windows, macOS,
+  Linux, and the browser. This snap repackages the official upstream Linux
+  release. The headless command-line tool is available as tracedraw.cli.
+license: MIT OR Apache-2.0
+website: https://github.com/igtoth/tracedraw
+source-code: https://github.com/igtoth/tracedraw
+issues: https://github.com/igtoth/tracedraw/issues
+contact: https://github.com/igtoth/tracedraw/issues
+icon: snap/gui/tracedraw.png
+grade: stable
+confinement: strict
+
+platforms:
+  amd64:
+  arm64:
+
+apps:
+  tracedraw:
+    command: bin/tracedraw
+    extensions: [gnome]
+    desktop: meta/gui/tracedraw.desktop
+    common-id: io.github.igtoth.tracedraw
+    plugs:
+      - home
+      - network
+      - opengl
+      - removable-media
+  cli:
+    command: bin/tracedraw-cli
+    extensions: [gnome]
+    plugs:
+      - home
+      - network
+      - removable-media
+
+parts:
+  tracedraw:
+    plugin: nil
+    build-packages:
+      - ca-certificates
+      - curl
+    stage-packages:
+      - libvulkan1
+      - libxkbcommon-x11-0
+    override-pull: |
+      set -eu
+      case "$CRAFT_ARCH_BUILD_FOR" in
+        amd64)
+          arch=x86_64
+          sha256=0231b186494562dbb59ad8c019d1cc590b6dd8e00182e444bcd77ccdf7c625c0
+          ;;
+        arm64)
+          arch=arm64
+          sha256=766beabb9ed08011fc6e25ff82c7b3616292f493a7d5d3b8d727bbd5f2d265c9
+          ;;
+        *)
+          echo "unsupported architecture: $CRAFT_ARCH_BUILD_FOR" >&2
+          exit 1
+          ;;
+      esac
+      name="tracedraw-${CRAFT_PROJECT_VERSION}-linux-${arch}"
+      url="https://github.com/igtoth/tracedraw/releases/download/v${CRAFT_PROJECT_VERSION}/${name}.tar.gz"
+      curl -fsSL --retry 3 -o "${name}.tar.gz" "$url"
+      printf '%s  %s.tar.gz\n' "$sha256" "$name" | sha256sum -c -
+      tar xzf "${name}.tar.gz"
+      rm -f "${name}.tar.gz"
+    override-build: |
+      set -eu
+      install -Dm755 tracedraw "$CRAFT_PART_INSTALL/bin/tracedraw"
+      install -Dm755 tracedraw-cli "$CRAFT_PART_INSTALL/bin/tracedraw-cli"
+      install -Dm644 "$CRAFT_PROJECT_DIR/snap/gui/tracedraw.desktop" "$CRAFT_PART_INSTALL/meta/gui/tracedraw.desktop"
+      install -Dm644 "$CRAFT_PROJECT_DIR/snap/gui/tracedraw.png" "$CRAFT_PART_INSTALL/meta/gui/tracedraw.png"
