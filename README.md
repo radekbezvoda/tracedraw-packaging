@@ -86,16 +86,3 @@ snap run tracedraw.cli
 
 `--dangerous` accepts a locally built, unsigned artifact. It does **not** make
 the installed Snap unconfined.
-
-## Preparing a GitHub release
-
-Keep source manifests and metadata in Git. Build artifacts are intentionally
-ignored so that a Git repository stays small; attach the verified `.flatpak`,
-`.snap`, and generated `SHA256SUMS` to a GitHub Release. Before publishing:
-
-1. update both manifests to the same upstream version and published checksums;
-2. build each artifact from a clean build directory;
-3. reinstall and smoke-test both packages;
-4. regenerate `releases/SHA256SUMS`;
-5. create a Git tag such as `v0.15.0-packaging.1` and attach the files to the
-   corresponding GitHub Release.
