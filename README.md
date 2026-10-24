@@ -1,7 +1,7 @@
 # Unofficial TraceDraw packages
 
 Reproducible local packaging for [TraceDraw](https://github.com/igtoth/tracedraw),
-currently targeting upstream version **0.15.0**.
+currently targeting upstream version **0.16.0**.
 
 This is an unofficial downstream packaging project. It downloads the exact
 upstream release archives, verifies their SHA-256 digests, and repackages the
@@ -23,8 +23,8 @@ architecture as `x86_64` in the Flatpak filename.
 
 | Artifact | Architecture | SHA-256 |
 | --- | --- | --- |
-| `tracedraw-0.15.0-x86_64-workdirs.flatpak` | x86_64 (AMD64) | `ae8f008c370b710fc5de5e3d542e7c550b652b6a811d8428a3c07355ebed7379` |
-| `tracedraw_0.15.0_amd64.snap` | x86_64 (AMD64) | `d78f092988a790ed892c9b1356ea0cba55c050a3d74e05365ad722a0f19ae91d` |
+| `tracedraw-0.16.0-x86_64-workdirs.flatpak` | x86_64 (AMD64) | `03bd8b96c9aabb2543ebe854297a95dea5d6189cbb59a2f910e51ca1dfc653c0` |
+| `tracedraw_0.16.0_amd64.snap` | x86_64 (AMD64) | `d6fead60e65e59a6a479a2f895d93c12e695034464e3a973d6ce54c3e6933504` |
 
 Verify locally with:
 
@@ -55,13 +55,13 @@ flatpak run io.github.igtoth.tracedraw
 ```sh
 cd flatpak
 flatpak-builder --repo=repo --force-clean build-dir io.github.igtoth.tracedraw.yml
-flatpak build-bundle repo ../releases/tracedraw-0.15.0-x86_64-workdirs.flatpak io.github.igtoth.tracedraw master
+flatpak build-bundle repo ../releases/tracedraw-0.16.0-x86_64-workdirs.flatpak io.github.igtoth.tracedraw master
 ```
 
 Test a bundle by reinstalling it:
 
 ```sh
-flatpak install --user --reinstall ../releases/tracedraw-0.15.0-x86_64-workdirs.flatpak
+flatpak install --user --reinstall ../releases/tracedraw-0.16.0-x86_64-workdirs.flatpak
 ```
 
 ## Snap
@@ -83,7 +83,7 @@ environment rather than with `--destructive-mode`:
 ```sh
 cd snap
 snapcraft pack --use-lxd
-sudo snap install --dangerous tracedraw_0.15.0_amd64.snap
+sudo snap install --dangerous tracedraw_0.16.0_amd64.snap
 snap run tracedraw
 snap run tracedraw.cli
 ```
