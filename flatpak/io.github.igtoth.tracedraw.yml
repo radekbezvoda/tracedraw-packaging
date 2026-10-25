@@ -23,8 +23,8 @@ modules:
       - install -Dm644 io.github.igtoth.tracedraw.metainfo.xml /app/share/metainfo/io.github.igtoth.tracedraw.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/igtoth/tracedraw/releases/download/v0.16.0/tracedraw-0.16.0-linux-x86_64.tar.gz
-        sha256: 95dc7c09c20b3a811a5d93d9f6cf93c7b3a6cd6fc964eebd69ff963a03a133c9
+        url: https://github.com/igtoth/tracedraw/releases/download/v0.17.0/tracedraw-0.17.0-linux-x86_64.tar.gz
+        sha256: 0cafe562fc9191287986e5afcd19cb118bc55925379df07a2261422e21222524
         strip-components: 0
       - type: file
         path: io.github.igtoth.tracedraw.desktop
