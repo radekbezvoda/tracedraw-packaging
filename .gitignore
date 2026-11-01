@@ -1,6 +1,8 @@
 # Local build output
 releases/*.flatpak
 releases/*.snap
+.cache/
+repo/
 
 # Flatpak build state
 flatpak/build-dir/
