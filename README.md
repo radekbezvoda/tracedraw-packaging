@@ -1,7 +1,7 @@
 # Unofficial TraceDraw packages
 
 Reproducible local packaging for [TraceDraw](https://github.com/igtoth/tracedraw),
-currently targeting upstream version **0.36.0**.
+currently targeting upstream version **0.37.0**.
 
 TraceDraw is primarily authored by **Ighor Toth**. This is an unofficial
 downstream packaging project. It downloads the exact upstream release archives,
@@ -23,8 +23,8 @@ architecture as `x86_64` in the Flatpak filename.
 
 | Artifact | Architecture | SHA-256 |
 | --- | --- | --- |
-| `tracedraw-0.36.0-x86_64-workdirs.flatpak` | x86_64 (AMD64) | `5abc640dac8cf996b02347a98379bcb77ab22637ecf6d4bb48b6644b3c135f33` |
-| `tracedraw_0.36.0_amd64.snap` | x86_64 (AMD64) | `159fe65b77449ac95a91ba31d3bd2d457eb0f3475cdb9c970eb3e387566ccc49` |
+| `tracedraw-0.37.0-x86_64-workdirs.flatpak` | x86_64 (AMD64) | `3070ff7015eed7f772cad46f9651f9474d6ecc4cd74a60e035efa25462cfde4e` |
+| `tracedraw_0.37.0_amd64.snap` | x86_64 (AMD64) | `e1306b0cf7a3942c85860e7fafe69449434425c944aee7f2feb691ec5d9d7279` |
 
 Verify locally with:
 
@@ -83,7 +83,7 @@ environment rather than with `--destructive-mode`:
 ```sh
 cd snap
 snapcraft pack --use-lxd
-sudo snap install --dangerous ../releases/tracedraw_0.33.0_amd64.snap
+sudo snap install --dangerous ../releases/tracedraw_0.37.0_amd64.snap
 snap run tracedraw
 snap run tracedraw.cli
 ```
