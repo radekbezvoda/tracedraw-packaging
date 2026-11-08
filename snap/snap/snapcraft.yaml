@@ -8,10 +8,10 @@ description: |
   Linux, and the browser. This snap repackages the official upstream Linux
   release. The headless command-line tool is available as tracedraw.cli.
 license: MIT OR Apache-2.0
-website: https://github.com/igtoth/tracedraw
-source-code: https://github.com/igtoth/tracedraw
-issues: https://github.com/igtoth/tracedraw/issues
-contact: https://github.com/igtoth/tracedraw/issues
+website: https://github.com/tracedraw/tracedraw
+source-code: https://github.com/tracedraw/tracedraw
+issues: https://github.com/tracedraw/tracedraw/issues
+contact: https://github.com/tracedraw/tracedraw/issues
 icon: snap/gui/tracedraw.png
 grade: stable
 confinement: strict
@@ -60,7 +60,7 @@ parts:
           ;;
       esac
       name="tracedraw-${CRAFT_PROJECT_VERSION}-linux-${arch}"
-      url="https://github.com/igtoth/tracedraw/releases/download/v${CRAFT_PROJECT_VERSION}/${name}.tar.gz"
+      url="https://github.com/tracedraw/tracedraw/releases/download/v${CRAFT_PROJECT_VERSION}/${name}.tar.gz"
       curl -fsSL --retry 3 -o "${name}.tar.gz" "$url"
       printf '%s  %s.tar.gz\n' "$sha256" "$name" | sha256sum -c -
       tar xzf "${name}.tar.gz"

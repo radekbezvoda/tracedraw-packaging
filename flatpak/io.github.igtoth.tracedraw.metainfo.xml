@@ -9,8 +9,8 @@
     <name>Igor Tóth</name>
   </developer>
   <launchable type="desktop-id">io.github.igtoth.tracedraw.desktop</launchable>
-  <url type="homepage">https://github.com/igtoth/tracedraw</url>
-  <url type="bugtracker">https://github.com/igtoth/tracedraw/issues</url>
+  <url type="homepage">https://github.com/tracedraw/tracedraw</url>
+  <url type="bugtracker">https://github.com/tracedraw/tracedraw/issues</url>
   <description>
     <p>TraceDraw is a vector illustration editor for Windows, macOS, Linux, and the browser.</p>
   </description>

@@ -1,6 +1,6 @@
 # Unofficial TraceDraw packages
 
-Reproducible local packaging for [TraceDraw](https://github.com/igtoth/tracedraw),
+Reproducible local packaging for [TraceDraw](https://github.com/tracedraw/tracedraw),
 currently targeting upstream version **0.41.0**.
 
 TraceDraw is primarily authored by **Ighor Toth**. This is an unofficial
