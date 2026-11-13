@@ -1,7 +1,7 @@
 name: tracedraw
 title: TraceDraw
 base: core24
-version: '0.45.0'
+version: '0.45.1'
 summary: Vector illustration editor
 description: |
   TraceDraw is an open-source vector illustration editor for Windows, macOS,
@@ -52,7 +52,7 @@ parts:
       case "$CRAFT_ARCH_BUILD_FOR" in
         amd64)
           arch=x86_64
-          sha256=81c9a9291597ce7faaa65c0e224d4df0e548c392c56ee5a7b431964e53d38de8
+          sha256=33891296ff4f09c4e91441ce750fc313bdf2edb41f4997a922fa066a2c7c1c16
           ;;
         *)
           echo "unsupported architecture: $CRAFT_ARCH_BUILD_FOR" >&2
