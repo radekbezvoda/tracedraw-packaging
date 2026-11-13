@@ -21,7 +21,7 @@
     <mediatype>application/x-cdr</mediatype>
   </provides>
   <releases>
-    <release version="0.44.0" date="2026-11-10"/>
+    <release version="0.45.0" date="2026-11-12"/>
   </releases>
   <content_rating type="oars-1.1"/>
 </component>
