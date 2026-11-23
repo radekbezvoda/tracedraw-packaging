@@ -3,6 +3,8 @@ releases/*.flatpak
 releases/*.snap
 .cache/
 repo/
+build-dir/
+.flatpak-builder/
 
 # Flatpak build state
 flatpak/build-dir/
